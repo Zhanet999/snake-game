@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#111827" />
+    <title>Змейка</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">КЛАССИЧЕСКАЯ ИГРА</p>
+          <h1>Змейка</h1>
+        </div>
+        <button class="icon-button" id="soundButton" aria-label="Включить или выключить звук">🔊</button>
+      </header>
+
+      <section class="stats" aria-label="Статистика игры">
+        <div class="stat-card"><span>Счёт</span><strong id="score">0</strong></div>
+        <div class="stat-card"><span>Рекорд</span><strong id="highScore">0</strong></div>
+      </section>
+
+      <section class="board-wrap" aria-label="Игровое поле">
+        <canvas id="game" width="600" height="600"></canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-card">
+            <p id="overlayTitle">Готовы?</p>
+            <span id="overlayText">Проведите пальцем по полю или используйте кнопки.</span>
+            <button id="startButton">Начать игру</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="controls" aria-label="Управление">
+        <button class="control up" data-direction="up" aria-label="Вверх">▲</button>
+        <button class="control left" data-direction="left" aria-label="Влево">◀</button>
+        <button class="control down" data-direction="down" aria-label="Вниз">▼</button>
+        <button class="control right" data-direction="right" aria-label="Вправо">▶</button>
+      </div>
+
+      <p class="hint">Собирайте ягоды. Не врезайтесь в стены и хвост.</p>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
